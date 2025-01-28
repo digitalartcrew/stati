@@ -62,3 +62,130 @@
 ## Best Fit Challenge
 The idea aligns well with **Challenge 1: Wild Card Challenge**.
 - It allows for creativity and flexibility, encouraging unique engagement with MLB™ stats and fan interaction.
+
+
+# MVP for Stati
+
+## UI Design Overview
+The interface will focus on user-friendliness, with a clean, dynamic design incorporating gamification elements. Below is the breakdown of the screens:
+
+---
+
+### 1. Home Screen (Dashboard)
+- **Elements**:
+  - Welcome banner with user stats (points, rank, team rank).
+  - Quick links to:
+    - "Make a Prediction"
+    - "View Challenges"
+    - "Team Rankings"
+    - "Leaderboard"
+  - Recent activity feed (e.g., recent challenges, top user predictions).
+- **Front-End Requirements**:
+  - Interactive cards for navigation.
+  - Dynamic data rendering (user stats, recent activity).
+  - Responsive design for mobile and desktop.
+- **Back-End Requirements**:
+  - APIs for user stats, leaderboard, recent challenges, and predictions.
+  - Authentication system for user login/logout.
+
+---
+
+### 2. Make a Prediction Screen
+- **Elements**:
+  - Dropdown for selecting:
+    - Player/Team
+    - Event type (e.g., Home Run, Strikeout, Hits).
+  - Input field for prediction details.
+  - Submit button.
+  - List of community-created predictions.
+- **Front-End Requirements**:
+  - Autocomplete for dropdowns.
+  - Validation for input fields.
+  - Dynamic updates to community predictions.
+- **Back-End Requirements**:
+  - Endpoints for submitting predictions.
+  - Integration with MLB™ datasets for autocomplete.
+  - Database for storing user predictions and events.
+
+---
+
+### 3. Challenges Screen
+- **Elements**:
+  - List of active challenges with:
+    - Challenge details (user, prediction, wagered points).
+    - Accept/Reject buttons.
+  - Filter/sort options (by event type, wager size, etc.).
+- **Front-End Requirements**:
+  - Dynamic filtering and sorting.
+  - Interactive challenge cards with status updates.
+- **Back-End Requirements**:
+  - APIs for fetching challenges and their status.
+  - Endpoint for accepting/rejecting challenges.
+  - Logic for updating point transfers between users.
+
+---
+
+### 4. Leaderboard Screen
+- **Elements**:
+  - Tabs for:
+    - Top Users.
+    - Top Teams.
+  - Leaderboard table with:
+    - Rank.
+    - Username/Team Name.
+    - Points.
+  - Search bar for finding users or teams.
+- **Front-End Requirements**:
+  - Interactive tabs and search functionality.
+  - Pagination for leaderboard entries.
+- **Back-End Requirements**:
+  - APIs for fetching leaderboard data.
+  - Search endpoint for users and teams.
+
+---
+
+### 5. Team Management Screen
+- **Elements**:
+  - Create/Join team options.
+  - List of current team members.
+  - Team stats and rank.
+  - Button for inviting users to the team.
+- **Front-End Requirements**:
+  - Modals for team creation and invitations.
+  - Dynamic updates for team member changes.
+- **Back-End Requirements**:
+  - Endpoints for creating/joining teams.
+  - Logic for handling invitations and updates.
+  - APIs for fetching team stats.
+
+---
+
+## Technical Requirements
+
+### Front-End Tech Stack
+- **Framework**: React.js (for dynamic and interactive UI).
+- **Styling**: TailwindCSS or Material-UI for modern and responsive design.
+- **State Management**: Redux or Context API for managing user data and app state.
+- **Multilingual Support**: i18n libraries like React-i18next.
+
+---
+
+### Back-End Tech Stack
+- **Framework**: Node.js with Express.js.
+- **Database**:
+  - **Firestore** or **BigQuery** for storing predictions, challenges, user/team data.
+- **Authentication**: Firebase Authentication or OAuth 2.0 for secure logins.
+- **APIs**:
+  - REST or GraphQL APIs for data exchange.
+- **AI Integration**:
+  - Google Cloud’s Vertex AI for prediction insights.
+  - Natural Language API for parsing user-generated event descriptions.
+- **Multilingual Support**: Google Translate API.
+
+---
+
+### Google Cloud Services
+- **BigQuery**: Storing and querying MLB™ datasets and user-generated predictions.
+- **Vertex AI**: Analyzing prediction trends and enhancing user engagement.
+- **Cloud Run**: Deploying server-side functions for scalability.
+- **Cloud Storage**: Hosting user-uploaded media (e.g., profile images, video highlights).
